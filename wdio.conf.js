@@ -50,14 +50,14 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [
-        {
+    //     {
     
-        maxInstances: 1,
-        browserName: 'chrome',
-       'goog:chromeOptions': {args: [ '--headless','--start-maximized']},
-        acceptInsecureCerts: true,
+    //     maxInstances: 1,
+    //     browserName: 'chrome',
+    //    'goog:chromeOptions': {args: [ '--headless','--start-maximized']},
+    //     acceptInsecureCerts: true,
        
-        },
+    //     },
         {
         maxInstances: 1,
         browserName: 'firefox',
