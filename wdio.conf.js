@@ -61,7 +61,7 @@ exports.config = {
         {
         maxInstances: 1,
         browserName: 'firefox',
-        'moz:firefoxOptions': {args: ['--headless', '--start-maximized']},
+       // 'moz:firefoxOptions': {args: ['--headless', '--start-maximized']},
         acceptInsecureCerts: true
         },
        
