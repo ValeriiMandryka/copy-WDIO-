@@ -1,0 +1,43 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+        - uses: actions/setup-node@v1
+          with:
+            node-version: 16.X
+        - name: Install
+          run: npm install
+        - name: Install Selenium
+          run: npm install @wdio/selenium-standalone-service --save-dev
+        - name: Install Allure
+          run: npm install @wdio/allure-reporter --save-dev
+        - name: Install Allure comandline
+          run: npm i allure-commandline
+        - name: Test
+          run: npx wdio run wdio.conf.js
+        - name: Generate report
+          if: always()
+          run: npx allure generate allure-results --clean
+        # - name: Upload Results
+        #   uses: actions/upload-artifact@v1
+        #   if: always()
+        #   with:
+        #      name: allure-results
+        #      path: ./allure-results
+        # - name: Publishing Allure artifact to Github Actions
+        #   uses: actions/upload-artifact@v2
+        #   if: always()
+        #   with:
+        #      name: allure-report
+        #      path: allure-report   
+        - name: Deploy to pages
+          if: always()
+          uses: peaceiris/actions-gh-pages@v3.7.3
+          with:
+             github_token: ${{ secrets.GITHUB_TOKEN }}
+             publish_branch: gh-pages
+             publish_dir: allure-report

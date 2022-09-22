@@ -1,0 +1,31 @@
+{
+    "name": "webdriverio-tests",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@wdio/allure-reporter": "^7.24.0",
+        "@wdio/cli": "^7.24.0",
+        "@wdio/local-runner": "^7.24.0",
+        "@wdio/mocha-framework": "^7.24.0",
+        "@wdio/selenium-standalone-service": "^7.24.0",
+        "@wdio/spec-reporter": "^7.24.0",
+        "install": "^0.13.0",
+        "wdio-docker-service": "^3.2.1"
+    },
+    "scripts": {
+        "crossbrowser:test:headless": "npx wdio run wdio.conf.js",
+        "crossbrowser:test:headless:allure": "npx wdio run wdio.conf.js && allure generate allure-results --clean && allure open",
+        "chrome:headless": "npx wdio run conf/chrome.headless.conf.js",
+        "chrome:ui": "npx wdio run conf/chrome.ui.conf.js",
+        "firefox:headless": "npx wdio run conf/firefox.headless.conf.js",
+        "firefox:ui": "npx wdio run conf/firefox.ui.conf.js",
+        "allure:report": "npx allure generate allure-results --clean",
+        "allure-serve": "npx allure serve allure-results",
+        "docker:crossbrowser": "npx wdio run conf/docker.conf.js",
+        "docker:composeruner:exit": "docker compose up --abort-on-container-exit",
+        "firefox:ui:messaging": "npx wdio run conf/firefox.ui.conf.js --spec messaging.module.js"
+    },
+    "dependencies": {
+        "allure-commandline": "^2.18.1"
+    }
+}
