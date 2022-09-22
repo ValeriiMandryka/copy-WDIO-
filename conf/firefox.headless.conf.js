@@ -5,7 +5,7 @@ const firefoxHeadlessConfig = {
 ...config,
 services: ["selenium-standalone"],
 capabilities: [{
-maxInstances: 4,
+maxInstances: 1,
 browserName: "firefox",
 'moz:firefoxOptions': {
 

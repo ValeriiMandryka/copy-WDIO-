@@ -13,12 +13,12 @@
         "wdio-docker-service": "^3.2.1"
     },
     "scripts": {
-        "crossbrowser:test:headless": "npx wdio run wdio.conf.js",
+        "crossbrowser:test:headless": "npx wdio run wdio.conf.js --spec logining.module.js",
         "crossbrowser:test:headless:allure": "npx wdio run wdio.conf.js && allure generate allure-results --clean && allure open",
-        "chrome:headless": "npx wdio run conf/chrome.headless.conf.js",
-        "chrome:ui": "npx wdio run conf/chrome.ui.conf.js",
-        "firefox:headless": "npx wdio run conf/firefox.headless.conf.js",
-        "firefox:ui": "npx wdio run conf/firefox.ui.conf.js",
+        "chrome:headless": "npx wdio run conf/chrome.headless.conf.js --spec logining.module.js",
+        "chrome:ui": "npx wdio run conf/chrome.ui.conf.js --spec logining.module.js",
+        "firefox:headless": "npx wdio run conf/firefox.headless.conf.js --spec logining.module.js",
+        "firefox:ui": "npx wdio run conf/firefox.ui.conf.js --spec logining.module.js",
         "allure:report": "npx allure generate allure-results --clean",
         "allure-serve": "npx allure serve allure-results",
         "docker:crossbrowser": "npx wdio run conf/docker.conf.js",

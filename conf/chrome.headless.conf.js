@@ -5,7 +5,7 @@ const chromeHeadlessConfig = {
 ...config,
 services: ["selenium-standalone"],
 capabilities: [{
-maxInstances: 4,
+maxInstances: 1,
 browserName: "chrome",
 'goog:chromeOptions': {
 
