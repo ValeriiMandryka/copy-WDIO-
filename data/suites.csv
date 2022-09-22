@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Sep 22 14:48:44 UTC 2022","Thu Sep 22 14:48:50 UTC 2022","5438","","cart module funcionality","","cart module funcionality","Verify Log in with valid credentials","Verify Log in with valid credentials",""
+"passed","Thu Sep 22 14:49:05 UTC 2022","Thu Sep 22 14:49:10 UTC 2022","5351","","Logining","","Logining","Verify Log in with valid credentials","Verify Log in with valid credentials",""
+"passed","Thu Sep 22 14:49:03 UTC 2022","Thu Sep 22 14:49:05 UTC 2022","2171","","Logining","","Logining","Open URL/accept cookies","Open URL/accept cookies",""
+"passed","Thu Sep 22 14:48:50 UTC 2022","Thu Sep 22 14:48:59 UTC 2022","9547","","cart module funcionality","","cart module funcionality","Verify the ability ya add a sim to the Cart","Verify the ability ya add a sim to the Cart",""
+"passed","Thu Sep 22 14:48:41 UTC 2022","Thu Sep 22 14:48:44 UTC 2022","2787","","cart module funcionality","","cart module funcionality","Open URL/accept cookies","Open URL/accept cookies",""
