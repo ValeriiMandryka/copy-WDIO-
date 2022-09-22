@@ -18,7 +18,7 @@ jobs:
         - name: Install Allure comandline
           run: npm i allure-commandline
         - name: Test
-          run: npx wdio run wdio.conf.js --spec main.module.js
+          run: npx wdio run wdio.conf.js --spec logining.module.js
         - name: Generate report
           if: always()
           run: npx allure generate allure-results --clean

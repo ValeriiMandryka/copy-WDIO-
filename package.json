@@ -23,7 +23,8 @@
         "allure-serve": "npx allure serve allure-results",
         "docker:crossbrowser": "npx wdio run conf/docker.conf.js",
         "docker:composeruner:exit": "docker compose up --abort-on-container-exit",
-        "firefox:ui:messaging": "npx wdio run conf/firefox.ui.conf.js --spec messaging.module.js"
+        "firefox:ui:messaging": "npx wdio run conf/firefox.ui.conf.js --spec messaging.module.js",
+        "test":"npx wdio run wdio.conf.js --spec logining.module.js"
     },
     "dependencies": {
         "allure-commandline": "^2.18.1"

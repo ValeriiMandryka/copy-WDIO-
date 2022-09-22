@@ -54,14 +54,14 @@ exports.config = {
     
         maxInstances: 1,
         browserName: 'chrome',
-       'goog:chromeOptions': {args: ['--headless']},
+       'goog:chromeOptions': {args: [ '--start-maximized']},
         acceptInsecureCerts: true,
        
         },
         {
         maxInstances: 1,
         browserName: 'firefox',
-        'moz:firefoxOptions': {args: ['--headless']},
+        'moz:firefoxOptions': {args: [ '--start-maximized']},
         acceptInsecureCerts: true
         },
        
